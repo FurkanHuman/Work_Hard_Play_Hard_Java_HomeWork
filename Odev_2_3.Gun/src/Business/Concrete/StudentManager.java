@@ -1,6 +1,6 @@
 package Business.Concrete;
 
-import Business.Abstrack.StudentService;
+import Business.Abstracts.StudentService;
 import Entities.Student;
 
 public class StudentManager extends UserManager implements StudentService {
@@ -8,30 +8,30 @@ public class StudentManager extends UserManager implements StudentService {
 	@Override
 	public void add(Student student) {
 		super.add(student);
-		System.out.println("Öðrenci Eklendi");
+		System.out.println("ï¿½ï¿½renci Eklendi");
 	}
 
 	@Override
 	public void update(Student student) {
 		super.update(student);
-		System.out.println("Öðrenci Güncellendi");
+		System.out.println("ï¿½ï¿½renci Gï¿½ncellendi");
 	}
 
 	@Override
 	public void delete(Student student) {
 		super.delete(student);
-		System.out.println("Öðrenci Silindi");
+		System.out.println("ï¿½ï¿½renci Silindi");
 	}
 
 	@Override
 	public void homeworkCompleter(Student student, String comment) {
 		student.setCourseCompleted(1);
-		System.out.println("ders tamamlama yüzdesi %" + student.getCourseCompleted() + " Ders içeriði " + comment);
+		System.out.println("ders tamamlama yï¿½zdesi %" + student.getCourseCompleted() + " Ders iï¿½eriï¿½i " + comment);
 	}
 
 	@Override
 	public void pollingAdd(Student student, int id) {
 		student.setCourseCompleted(id);
-		System.out.println("Yoklamanýz Alýndý");
+		System.out.println("Yoklamanï¿½z Alï¿½ndï¿½");
 	}
 }

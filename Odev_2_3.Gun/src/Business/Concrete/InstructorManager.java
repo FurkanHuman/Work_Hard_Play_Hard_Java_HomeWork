@@ -1,6 +1,6 @@
 package Business.Concrete;
 
-import Business.Abstrack.InstructorService;
+import Business.Abstracts.InstructorService;
 import Entities.Instructor;
 
 public class InstructorManager extends UserManager implements InstructorService {
@@ -8,23 +8,23 @@ public class InstructorManager extends UserManager implements InstructorService 
     @Override
     public void add(Instructor instructor) {
         super.add(instructor);
-        System.out.println("öðretmen Eklendi");
+        System.out.println("ï¿½ï¿½retmen Eklendi");
     }
 
     @Override
     public void homeworkAdd(String comment, int dayOfNumber) {
-        System.out.println("gün " + dayOfNumber + " Günün dersi " + comment);
+        System.out.println("gï¿½n " + dayOfNumber + " Gï¿½nï¿½n dersi " + comment);
     }
 
     @Override
     public void update(Instructor instructor) {
         super.update(instructor);
-        System.out.println("öðretmen Güncellendi");
+        System.out.println("ï¿½ï¿½retmen Gï¿½ncellendi");
     }
 
     @Override
     public void delete(Instructor instructor) {
         super.delete(instructor);
-        System.out.println("öðretmen Silindi");
+        System.out.println("ï¿½ï¿½retmen Silindi");
     }
 }

@@ -1,0 +1,11 @@
+package entities.concretes;
+
+import entities.abstracts.Entity;
+
+public class Campaign extends Sale {
+ 
+	private int id;
+    private double discount;
+    private String discountName;
+
+}

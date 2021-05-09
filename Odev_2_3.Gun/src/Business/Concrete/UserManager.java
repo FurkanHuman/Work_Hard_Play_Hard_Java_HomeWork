@@ -3,7 +3,7 @@ package Business.Concrete;
 import java.util.ArrayList;
 import java.util.List;
 
-import Business.Abstrack.UserService;
+import Business.Abstracts.UserService;
 import Entities.User;
 
 public class UserManager implements UserService {
@@ -12,21 +12,21 @@ public class UserManager implements UserService {
 
     @Override
     public void add(User user) {
-        System.out.println("ID: " + user.getId() + " Adý: " + user.getName() + " Soyadý: " + user.getSurname()
-                + " kullanýcý eklendi");
+        System.out.println("ID: " + user.getId() + " Adï¿½: " + user.getName() + " Soyadï¿½: " + user.getSurname()
+                + " kullanï¿½cï¿½ eklendi");
         userAll.add(user);
     }
 
     @Override
     public void update(User user) {
-        System.out.println("ID: " + user.getId() + " Adý: " + user.getName() + " Soyadý: " + user.getSurname()
-                + " kullanýcý güncellendi");
+        System.out.println("ID: " + user.getId() + " Adï¿½: " + user.getName() + " Soyadï¿½: " + user.getSurname()
+                + " kullanï¿½cï¿½ gï¿½ncellendi");
     }
 
     @Override
     public void delete(User user) {
-        System.out.println("ID: " + user.getId() + " Adý: " + user.getName() + " Soyadý: " + user.getSurname()
-                + " kullanýcý silindi");
+        System.out.println("ID: " + user.getId() + " Adï¿½: " + user.getName() + " Soyadï¿½: " + user.getSurname()
+                + " kullanï¿½cï¿½ silindi");
     }
 
     @Override
