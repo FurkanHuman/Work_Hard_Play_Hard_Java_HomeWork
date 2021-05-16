@@ -1,29 +1,21 @@
 package entities.concretes;
 
+import java.time.LocalDateTime;
+
 import entities.abstracts.Entity;
 
 public class Sale implements Entity {
 
     private int id;
-    private String gameName;
-    private String gameComment;
-    private int gameCategory;
-    private String gameCategoryName;
-    private double price;
-    private double afterDiscountPrice;
+    private String cartNumber;
+    private LocalDateTime saleDateTime;
 
     public Sale() {
     }
 
-    public Sale(int id, String gameName, String gameComment, int gameCategory, String gameCategoryName, double price,
-            double afterDiscountPrice) {
+    public Sale(int id, String cartNumber) {
         this.id = id;
-        this.gameName = gameName;
-        this.gameComment = gameComment;
-        this.gameCategory = gameCategory;
-        this.gameCategoryName = gameCategoryName;
-        this.price = price;
-        this.afterDiscountPrice = afterDiscountPrice;
+        this.cartNumber = cartNumber;
     }
 
     public int getId() {
@@ -34,51 +26,20 @@ public class Sale implements Entity {
         this.id = id;
     }
 
-    public String getGameName() {
-        return gameName;
+    public String getCartNumber() {
+        return cartNumber;
     }
 
-    public void setGameName(String gameName) {
-        this.gameName = gameName;
+    public void setCartNumber(String cartNumber) {
+        this.cartNumber = cartNumber;
     }
 
-    public String getGameComment() {
-        return gameComment;
+    public LocalDateTime getSaleDateTime() {
+        return saleDateTime;
     }
 
-    public void setGameComment(String gameComment) {
-        this.gameComment = gameComment;
-    }
+    public void setSaleDateTime() {
+        this.saleDateTime = LocalDateTime.now();
 
-    public int getGameCategory() {
-        return gameCategory;
-    }
-
-    public void setGameCategory(int gameCategory) {
-        this.gameCategory = gameCategory;
-    }
-
-    public String getGameCategoryName() {
-        return gameCategoryName;
-    }
-
-    public void setGameCategoryName(String gameCategoryName) {
-        this.gameCategoryName = gameCategoryName;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public double getAfterDiscountPrice() {
-        return afterDiscountPrice;
-    }
-
-    public void setAfterDiscountPrice(double afterDiscountPrice) {
-        this.afterDiscountPrice = afterDiscountPrice;
     }
 }

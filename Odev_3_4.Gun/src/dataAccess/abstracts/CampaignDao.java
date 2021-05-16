@@ -1,7 +1,5 @@
 package dataAccess.abstracts;
 
-import java.util.List;
-
 import entities.concretes.Campaign;
 
 public interface CampaignDao {
@@ -11,8 +9,6 @@ public interface CampaignDao {
 
     public void update(Campaign campaign);
 
-    List<Campaign> get(int id);
-
-    List<Campaign> getAll();
+    public void list(Campaign[] campaigns);
 
 }

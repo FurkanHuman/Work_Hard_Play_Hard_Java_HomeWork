@@ -1,6 +1,8 @@
 package entities.concretes;
 
-public class Campaign extends Sale {
+import entities.abstracts.Entity;
+
+public class Campaign implements Entity {
 
     private int id;
     private double discount;

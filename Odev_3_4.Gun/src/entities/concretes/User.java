@@ -1,6 +1,5 @@
 package entities.concretes;
 
-
 import entities.abstracts.Entity;
 
 public class User implements Entity {
@@ -12,11 +11,13 @@ public class User implements Entity {
     private String email;
     private String password;
     private int birthOfYear;
+    private boolean real = false;
 
     public User() {
     }
 
-    public User(int id, String nId, String name, String surName, String email, String password, int birthOfYear) {
+    public User(int id, String nId, String name, String surName, String email, String password, int birthOfYear,
+            boolean real) {
         this.id = id;
         this.nId = nId;
         this.name = name;
@@ -24,6 +25,7 @@ public class User implements Entity {
         this.email = email;
         this.password = password;
         this.birthOfYear = birthOfYear;
+        this.real = real;
     }
 
     public int getId() {
@@ -80,6 +82,14 @@ public class User implements Entity {
 
     public void setBirthOfYear(int birthOfYear) {
         this.birthOfYear = birthOfYear;
+    }
+
+    public boolean isReal() {
+        return real;
+    }
+
+    public void setReal(boolean real) {
+        this.real = real;
     }
 
 }

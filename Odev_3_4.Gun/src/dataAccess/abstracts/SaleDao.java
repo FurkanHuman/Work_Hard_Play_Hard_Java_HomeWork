@@ -1,7 +1,5 @@
 package dataAccess.abstracts;
 
-import java.util.List;
-
 import entities.concretes.Sale;
 
 public interface SaleDao {
@@ -12,8 +10,6 @@ public interface SaleDao {
 
     public void update(Sale sale);
 
-    List<Sale> get(int id);
-
-    List<Sale> getAll();
+    public void list(Sale[] sales);
 
 }

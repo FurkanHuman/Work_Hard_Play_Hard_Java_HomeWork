@@ -1,7 +1,5 @@
 package dataAccess.abstracts;
 
-import java.util.List;
-
 import entities.concretes.User;
 
 public interface UserDao {
@@ -12,8 +10,5 @@ public interface UserDao {
 
     public void update(User user);
 
-    List<User> get(int id);
-
-    List<User> getAll();
-
+    public void list(User[] users);
 }
